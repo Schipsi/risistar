@@ -1,0 +1,130 @@
+[15-Jan-2018 22:23:10] NOTICE: "Undefined index: user"
+File: /app/includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php | Line: 229
+URL: http://localhost:8080/game.php | Version: 1.8.git
+Stack trace:
+#0 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(229): errorHandler(8, 'Undefined index...', '/includes/l...', 229, Array)
+#1 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(146): updatePlayers(Object(PlayerGroup), Array)
+#2 /includes/classes/missions/MissionCaseAttack.class.php(181): calculateAttack(Array, Array, '30', '0')
+#3 /includes/classes/class.FlyingFleetHandler.php(80): MissionCaseAttack-&gt;TargetEvent()
+#4 /includes/FleetHandler.php(31): FlyingFleetHandler-&gt;run()
+#5 /includes/common.php(127): require('/includes/F...')
+#6 /game.php(24): require('/includes/c...')
+#7 {main}
+[15-Jan-2018 22:23:17] NOTICE: "Undefined index: user"
+File: /app/includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php | Line: 229
+URL: http://localhost:8080/game.php | Version: 1.8.git
+Stack trace:
+#0 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(229): errorHandler(8, 'Undefined index...', '/includes/l...', 229, Array)
+#1 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(146): updatePlayers(Object(PlayerGroup), Array)
+#2 /includes/classes/missions/MissionCaseAttack.class.php(181): calculateAttack(Array, Array, '30', '0')
+#3 /includes/classes/class.FlyingFleetHandler.php(80): MissionCaseAttack-&gt;TargetEvent()
+#4 /includes/FleetHandler.php(31): FlyingFleetHandler-&gt;run()
+#5 /includes/common.php(127): require('/includes/F...')
+#6 /game.php(24): require('/includes/c...')
+#7 {main}
+[15-Jan-2018 22:23:44] NOTICE: "Undefined index: user"
+File: /app/includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php | Line: 229
+URL: http://localhost:8080/game.php | Version: 1.8.git
+Stack trace:
+#0 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(229): errorHandler(8, 'Undefined index...', '/includes/l...', 229, Array)
+#1 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(146): updatePlayers(Object(PlayerGroup), Array)
+#2 /includes/classes/missions/MissionCaseAttack.class.php(181): calculateAttack(Array, Array, '30', '0')
+#3 /includes/classes/class.FlyingFleetHandler.php(80): MissionCaseAttack-&gt;TargetEvent()
+#4 /includes/FleetHandler.php(31): FlyingFleetHandler-&gt;run()
+#5 /includes/common.php(127): require('/includes/F...')
+#6 /game.php(24): require('/includes/c...')
+#7 {main}
+[15-Jan-2018 22:25:39] NOTICE: "Undefined index: user"
+File: /app/includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php | Line: 229
+URL: http://localhost:8080/game.php | Version: 1.8.git
+Stack trace:
+#0 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(229): errorHandler(8, 'Undefined index...', '/includes/l...', 229, Array)
+#1 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(146): updatePlayers(Object(PlayerGroup), Array)
+#2 /includes/classes/missions/MissionCaseAttack.class.php(181): calculateAttack(Array, Array, '30', '0')
+#3 /includes/classes/class.FlyingFleetHandler.php(80): MissionCaseAttack-&gt;TargetEvent()
+#4 /includes/FleetHandler.php(31): FlyingFleetHandler-&gt;run()
+#5 /includes/common.php(127): require('/includes/F...')
+#6 /game.php(24): require('/includes/c...')
+#7 {main}
+[15-Jan-2018 22:27:10] NOTICE: "Undefined index: user"
+File: /app/includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php | Line: 229
+URL: http://localhost:8080/game.php?page=overview | Version: 1.8.git
+Stack trace:
+#0 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(229): errorHandler(8, 'Undefined index...', '/includes/l...', 229, Array)
+#1 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(146): updatePlayers(Object(PlayerGroup), Array)
+#2 /includes/classes/missions/MissionCaseAttack.class.php(181): calculateAttack(Array, Array, '30', '0')
+#3 /includes/classes/class.FlyingFleetHandler.php(80): MissionCaseAttack-&gt;TargetEvent()
+#4 /includes/FleetHandler.php(31): FlyingFleetHandler-&gt;run()
+#5 /includes/common.php(127): require('/includes/F...')
+#6 /game.php(24): require('/includes/c...')
+#7 {main}
+[15-Jan-2018 22:42:46] NOTICE: "Undefined index: user"
+File: /app/includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php | Line: 229
+URL: http://localhost:8080/game.php?page=messages | Version: 1.8.git
+Stack trace:
+#0 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(229): errorHandler(8, 'Undefined index...', '/includes/l...', 229, Array)
+#1 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(146): updatePlayers(Object(PlayerGroup), Array)
+#2 /includes/classes/missions/MissionCaseAttack.class.php(181): calculateAttack(Array, Array, '30', '0')
+#3 /includes/classes/class.FlyingFleetHandler.php(80): MissionCaseAttack-&gt;TargetEvent()
+#4 /includes/FleetHandler.php(31): FlyingFleetHandler-&gt;run()
+#5 /includes/common.php(127): require('/includes/F...')
+#6 /game.php(24): require('/includes/c...')
+#7 {main}
+[15-Jan-2018 22:44:45] USER ERROR: "Call to undefined function dump()"
+File: /app/includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php | Line: 228
+URL: http://localhost:8080/game.php?page=galaxy | Version: 1.8.git
+Stack trace:
+#0 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(146): updatePlayers(Object(PlayerGroup), Array)
+#1 /includes/classes/missions/MissionCaseAttack.class.php(181): calculateAttack(Array, Array, '30', '0')
+#2 /includes/classes/class.FlyingFleetHandler.php(80): MissionCaseAttack-&gt;TargetEvent()
+#3 /includes/FleetHandler.php(31): FlyingFleetHandler-&gt;run()
+#4 /includes/common.php(127): require('/includes/F...')
+#5 /game.php(24): require('/includes/c...')
+#6 {main}
+[15-Jan-2018 23:14:36] NOTICE: "Undefined index: user"
+File: /app/includes/libs/opbe/implementations/2Moons/1_6_1_injectionMode/calculateAttack.php | Line: 78
+URL: http://localhost:8080/game.php?page=battleHall | Version: 1.8.git
+Stack trace:
+#0 /includes/libs/opbe/implementations/2Moons/1_6_1_injectionMode/calculateAttack.php(78): errorHandler(8, 'Undefined index...', '/includes/l...', 78, Array)
+#1 /includes/classes/missions/MissionCaseAttack.class.php(181): calculateAttack(Array, Array, '30', '0')
+#2 /includes/classes/class.FlyingFleetHandler.php(80): MissionCaseAttack-&gt;TargetEvent()
+#3 /includes/FleetHandler.php(31): FlyingFleetHandler-&gt;run()
+#4 /includes/common.php(127): require('/includes/F...')
+#5 /game.php(24): require('/includes/c...')
+#6 {main}
+[15-Jan-2018 23:16:58] NOTICE: "Undefined index: user"
+File: /app/includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php | Line: 229
+URL: http://localhost:8080/game.php?page=galaxy | Version: 1.8.git
+Stack trace:
+#0 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(229): errorHandler(8, 'Undefined index...', '/includes/l...', 229, Array)
+#1 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(146): updatePlayers(Object(PlayerGroup), Array)
+#2 /includes/classes/missions/MissionCaseAttack.class.php(181): calculateAttack(Array, Array, '30', '0')
+#3 /includes/classes/class.FlyingFleetHandler.php(80): MissionCaseAttack-&gt;TargetEvent()
+#4 /includes/FleetHandler.php(31): FlyingFleetHandler-&gt;run()
+#5 /includes/common.php(127): require('/includes/F...')
+#6 /game.php(24): require('/includes/c...')
+#7 {main}
+[20-Jan-2018 13:22:49] NOTICE: "Undefined index: user"
+File: /app/includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php | Line: 229
+URL: http://localhost:8080/game.php?page=messages | Version: 1.8.git
+Stack trace:
+#0 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(229): errorHandler(8, 'Undefined index...', '/includes/l...', 229, Array)
+#1 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(146): updatePlayers(Object(PlayerGroup), Array)
+#2 /includes/classes/missions/MissionCaseAttack.class.php(181): calculateAttack(Array, Array, '30', '0')
+#3 /includes/classes/class.FlyingFleetHandler.php(80): MissionCaseAttack-&gt;TargetEvent()
+#4 /includes/FleetHandler.php(31): FlyingFleetHandler-&gt;run()
+#5 /includes/common.php(127): require('/includes/F...')
+#6 /game.php(24): require('/includes/c...')
+#7 {main}
+[20-Jan-2018 13:32:10] NOTICE: "Undefined index: user"
+File: /app/includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php | Line: 229
+URL: http://localhost:8080/game.php?page=messages | Version: 1.8.git
+Stack trace:
+#0 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(229): errorHandler(8, 'Undefined index...', '/includes/l...', 229, Array)
+#1 /includes/libs/opbe/implementations/2Moons/1_7_2_injectionMode/calculateAttack.php(146): updatePlayers(Object(PlayerGroup), Array)
+#2 /includes/classes/missions/MissionCaseAttack.class.php(181): calculateAttack(Array, Array, '30', '0')
+#3 /includes/classes/class.FlyingFleetHandler.php(80): MissionCaseAttack-&gt;TargetEvent()
+#4 /includes/FleetHandler.php(31): FlyingFleetHandler-&gt;run()
+#5 /includes/common.php(127): require('/includes/F...')
+#6 /game.php(24): require('/includes/c...')
+#7 {main}
