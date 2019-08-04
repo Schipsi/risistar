@@ -1,7 +1,7 @@
 <?php
 
 /**
- *  2Moons 
+ *  2Moons
  *   by Jan-Otto Kröpke 2009-2016
  *
  * For the full copyright and license information, please view the LICENSE
@@ -22,7 +22,7 @@ class PlayerUtil
 		$salt = NULL;
 		// @see: http://www.phpgangsta.de/schoener-hashen-mit-bcrypt
 		require 'includes/config.php';
-		
+
 		if(!CRYPT_BLOWFISH || is_null($salt)) {
 			return md5($password);
 		} else {
@@ -62,7 +62,7 @@ class PlayerUtil
 	}
 
 	static public function isMailValid($address) {
-		
+
 		if(function_exists('filter_var')) {
 			return filter_var($address, FILTER_VALIDATE_EMAIL) !== FALSE;
 		} else {
@@ -81,11 +81,11 @@ class PlayerUtil
 			|| $config->max_system < $system
 			|| $config->max_planets < $position);
 	}
-	
+
 	static public function createPlayer($universe, $userName, $userPassword, $userMail, $userLanguage = NULL, $galaxy = NULL, $system = NULL, $position = NULL, $name = NULL, $authlevel = 0, $userIpAddress = NULL)
 	{
 		$config	= Config::get($universe);
-		
+
 		if (isset($universe, $galaxy, $system, $position))
 		{
 			if (self::checkPosition($universe, $galaxy, $system, $position) === false)
@@ -98,40 +98,59 @@ class PlayerUtil
 				throw new Exception(sprintf("Position is not empty: %s:%s:%s!", $galaxy, $system, $position));
 			}
 		} else {
-			$galaxy	= $config->LastSettedGalaxyPos;
-			$system = $config->LastSettedSystemPos;
-			$planet	= $config->LastSettedPlanetPos;
 
-			if($galaxy > $config->max_galaxy) {
-				$galaxy	= 1;
+			$lastSettedGalaxyPos = $config->LastSettedGalaxyPos;
+			$lastSettedSystemPos = $config->LastSettedSystemPos + 1;
+
+			if ($lastSettedSystemPos > 400) {
+				$lastSettedGalaxyPos += 1;
+				$lastSettedSystemPos = 1;
 			}
 
-			if($system > $config->max_system) {
-				$system	= 1;
-			}
-			
+			$galaxy = $lastSettedGalaxyPos ?? 1;
+
 			do {
-				$position = mt_rand(round($config->max_planets * 0.2), round($config->max_planets * 0.8));
-				if ($planet < 3) {
-					$planet += 1;
-				} else {
-					if ($system >= $config->max_system) {
-						$system = 1;
-						if($galaxy >= $config->max_galaxy) {
-							$galaxy	= 1;
-						} else {
-							$galaxy += 1;
-						}
-					} else {
-						$system += 1;
-					}
-				}
+				$system = mt_rand(round(1, 400);
+				$position = mt_rand(round(4, 12));
 			} while (self::isPositionFree($universe, $galaxy, $system, $position) === false);
 
-			// Update last coordinates to config table
 			$config->LastSettedGalaxyPos = $galaxy;
-			$config->LastSettedSystemPos = $system;
-			$config->LastSettedPlanetPos = $planet;
+		 	$config->LastSettedSystemPos = $system;
+
+			// $galaxy	= $config->LastSettedGalaxyPos;
+			// $system = $config->LastSettedSystemPos;
+			// $planet	= $config->LastSettedPlanetPos;
+			//
+			// if($galaxy > $config->max_galaxy) {
+			// 	$galaxy	= 1;
+			// }
+			//
+			// if($system > $config->max_system) {
+			// 	$system	= 1;
+			// }
+			//
+			// do {
+			// 	$position = mt_rand(round($config->max_planets * 0.2), round($config->max_planets * 0.8));
+			// 	if ($planet < 3) {
+			// 		$planet += 1;
+			// 	} else {
+			// 		if ($system >= $config->max_system) {
+			// 			$system = 1;
+			// 			if($galaxy >= $config->max_galaxy) {
+			// 				$galaxy	= 1;
+			// 			} else {
+			// 				$galaxy += 1;
+			// 			}
+			// 		} else {
+			// 			$system += 1;
+			// 		}
+			// 	}
+			// } while (self::isPositionFree($universe, $galaxy, $system, $position) === false);
+			//
+			// // Update last coordinates to config table
+			// $config->LastSettedGalaxyPos = $galaxy;
+			// $config->LastSettedSystemPos = $system;
+			// $config->LastSettedPlanetPos = $planet;
 		}
 
 		$params			= array(
@@ -170,10 +189,10 @@ class PlayerUtil
 		$db = Database::get();
 
 		$db->insert($sql, $params);
-		
+
 		$userId		= $db->lastInsertId();
 		$planetId	= self::createPlanet($galaxy, $system, $position, $universe, $userId, $name, true, $authlevel);
-				
+
 		$currentUserAmount		= $config->users_amount + 1;
 		$config->users_amount	= $currentUserAmount;
 
@@ -197,7 +216,7 @@ class PlayerUtil
 			':universe'	=> $universe,
 			':type'		=> 1,
 		), 'rank');
-		
+
 		$sql = "INSERT INTO %%STATPOINTS%% SET
 				id_owner	= :userId,
 				universe	= :universe,
@@ -214,12 +233,12 @@ class PlayerUtil
 		   ':type'		=> 1,
 		   ':rank'		=> $rank + 1,
 		));
-		
+
 		$config->save();
 
 		return array($userId, $planetId);
 	}
-	
+
 	static public function createPlanet($galaxy, $system, $position, $universe, $userId, $name = NULL, $isHome = false, $authlevel = 0)
 	{
 		global $LNG;
@@ -305,7 +324,7 @@ class PlayerUtil
 
 		return $db->lastInsertId();
 	}
-	
+
 	static public function createMoon($universe, $galaxy, $system, $position, $userId, $chance, $diameter = NULL, $moonName = NULL)
 	{
 		global $LNG;
@@ -400,7 +419,7 @@ class PlayerUtil
 
 		return $moonId;
 	}
- 
+
 	static public function deletePlayer($userId)
 	{
 		if(ROOT_USER == $userId)
@@ -426,7 +445,7 @@ class PlayerUtil
 			$memberCount	= $db->selectSingle($sql, array(
 				':allianceId'	=> $userData['ally_id']
 			), 'ally_members');
-			
+
 			if ($memberCount > 1)
 			{
 				$sql	= 'UPDATE %%ALLIANCE%% SET ally_members = ally_members - 1 WHERE id = :allianceId;';
@@ -497,7 +516,7 @@ class PlayerUtil
 			':userId'	=> $userId,
 			':type'		=> 1
 		));
-		
+
 		$fleetIds	= $db->select('SELECT fleet_id FROM %%FLEETS%% WHERE fleet_target_owner = :userId;', array(
 			':userId'	=> $userId
 		));
@@ -512,7 +531,7 @@ class PlayerUtil
 		$db->update($sql, array(
 			':universe' => $userData['universe']
 		));
-		
+
 		Cache::get()->flush('universe');
         */
 
@@ -526,7 +545,7 @@ class PlayerUtil
 		$planetData = $db->selectSingle($sql, array(
 			':planetId'	=> $planetId
 		));
-		
+
 		if(empty($planetData))
 		{
 			throw new Exception("Can not found planet #".$planetId."!");
@@ -563,7 +582,7 @@ class PlayerUtil
 
 		return true;
 	}
-	
+
 	static public function maxPlanetCount($USER)
 	{
 		global $resource;
@@ -571,7 +590,7 @@ class PlayerUtil
 
 		$planetPerTech	= $config->planets_tech;
 		$planetPerBonus	= $config->planets_officier;
-		
+
 		if($config->min_player_planets == 0)
 		{
 			$planetPerTech = 999;
@@ -581,7 +600,7 @@ class PlayerUtil
 		{
 			$planetPerBonus = 999;
 		}
-		
+
 		// http://owiki.de/index.php/Astrophysik#.C3.9Cbersicht
 		return (int) ceil($config->min_player_planets + min($planetPerTech, $USER[$resource[124]] * $config->planets_per_tech) + min($planetPerBonus, $USER['factor']['Planets']));
 	}
